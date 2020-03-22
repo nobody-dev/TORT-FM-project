@@ -19,6 +19,7 @@ build/index.html
 ```
 - PUG (ex Jade)
 - SCSS
+- Adaptive for iPhone 6,
 - Javascript
 - JQuery
 - Self-made gulp
