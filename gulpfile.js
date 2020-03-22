@@ -14,7 +14,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const notify = require("gulp-notify");
 
 sass.compiler = require('node-sass');
- 
+
 const scssFiles = [
     './src/css/fonts.scss',
     './src/css/main.scss',
@@ -64,7 +64,7 @@ function svg() {
     .pipe(gulp.dest('./build/svg'))
     .pipe(browserSync.stream());
 }
-    
+
 function styles() {
     return gulp.src(scssFiles)
     .pipe(plumber({
@@ -102,14 +102,14 @@ function watch() {
         server: {
             baseDir: './build'
         }
-    })
-    gulp.watch('./src/css/*.scss', styles),
-    gulp.watch('./src/js/*.js', scripts),
-    gulp.watch('./src/libs/**/*.*', libs),
-    gulp.watch('./src/pug/**/*.*', pugbuild)
-    gulp.watch('./src/img/**/*.*', compress),
-    gulp.watch('./src/fonts/**/*.*', fonts)
-    gulp.watch('./src/svg/**/*.*', svg)
+    });
+    gulp.watch('./src/css/*.scss', styles);
+    gulp.watch('./src/js/*.js', scripts);
+    gulp.watch('./src/libs/**/*.*', libs);
+    gulp.watch('./src/pug/**/*.*', pugbuild);
+    gulp.watch('./src/img/**/*.*', compress);
+    gulp.watch('./src/fonts/**/*.*', fonts);
+    gulp.watch('./src/svg/**/*.*', svg);
 
 }
 
